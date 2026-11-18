@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://android.com">
-
     <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
-
     <application
         android:label="Chat Hors Ligne"
         android:theme="@android:style/Theme.Material.Light">
@@ -21,65 +18,3 @@
         </activity>
     </application>
 </manifest>
-Utilisez le code avec précaution.
-3. Vérifiez que la ligne 2 contient bien ://android.com, puis cliquez deux fois sur Commit changes.
-
-Étape 2 : Vérifier le chemin de MainActivity.kt à gauche
-
-• Regardez la colonne de gauche sur votre capture : vous avez un dossier app/src/main à l'intérieur de app (ce qui crée le chemin app/app/src/main/...).
-• Vérifiez en cliquant sur la petite flèche à gauche du dossier java (juste au-dessus de AndroidManifest.xml) que votre fichier MainActivity.kt se trouve bien dans :
-app → src → main → java → com → chat → horsligne → MainActivity.kt.
-• S'il est dans le mauvais dossier (app/app/src/main/...), recréez-le simplement avec Add file → Create new file en tapant exactement :
-app/src/main/java/com/chat/horsligne/MainActivity.kt
-
-Étape 3 : Regarder la fabrication réussir
-
-• Allez dans l'onglet Actions : cette fois, toutes les lignes de AndroidManifest.xml sont valides et la compilation va passer au vert !
-Dites-moi dès que vous avez enregistré la ligne 2 de AndroidManifest.xml et vérifié la coche verte dans Actions (ou envoyez-moi une capture si une autre erreur apparaît).
-Les réponses de l'IA peuvent contenir des erreurs. En savoir plus
-
-peut tu reexplique
-
-Pour débloquer l'application tout de suite, il suffit de corriger deux petites fautes dans le fichier AndroidManifest.xml qui était affiché sur votre écran.
-Voici les deux gestes très simples à faire :
-
-1. Corriger le fichier AndroidManifest.xml
-
-Sur votre dernière capture d'écran, vous étiez déjà au bon endroit. Voici comment corriger les deux erreurs trouvées :
-1. Cliquez sur l'icône crayon (tout en haut à droite de la zone du code, à côté du bouton Raw).
-2. Effacez tout le texte (Ctrl + A puis Suppr).
-3. Collez exactement ce code corrigé :
-xml
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://android.com">
-
-    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30" />
-    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
-
-    <application
-        android:label="Chat Hors Ligne"
-        android:theme="@android:style/Theme.Material.Light">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
-</manifest>
-Utilisez le code avec précaution.
-4. Cliquez sur le bouton vert Commit changes..., puis une seconde fois sur Commit changes.
-
-2. Vérifier le résultat dans l'onglet Actions
-
-• Pourquoi ça bloquait avant ? À la ligne 2 de votre fichier, il manquait la fin de l'adresse (://android.com), ce qui empêchait Android de comprendre le fichier.
-• Lancement automatique : Dès que vous validez la modification, GitHub relance tout seul la fabrication.
-• Télécharger l'application : Cliquez sur l'onglet Actions en haut, attendez 1 à 2 minutes que la coche verte apparaisse, puis descendez tout en bas de la page pour télécharger ChatHorsLigne-APK.
-Dites-moi dès que vous avez enregistré cette modification et vu le résultat dans Actions (coche verte ou éventuelle nouvelle erreur) !
-Les réponses de l'IA peuvent contenir des erreurs. En savoir plus
